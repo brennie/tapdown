@@ -4,6 +4,7 @@ const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
+const ScriptExtPlugin = require('script-ext-html-webpack-plugin');
 
 const vendorCss = new ExtractTextPlugin({
   filename: path.join('static', 'css', 'vendor.css'),
@@ -89,6 +90,9 @@ module.exports = {
     new HtmlPlugin({
       inject: 'head',
       template: path.resolve(__dirname, 'src', 'html', 'index.ejs')
+    }),
+    new ScriptExtPlugin({
+      defaultAttribute: 'defer',
     }),
   ],
   resolve: {
