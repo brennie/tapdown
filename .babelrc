@@ -1,0 +1,6 @@
+{
+  "presets": ["react"],
+  "plugins": [
+    "syntax-trailing-function-commas"
+  ]
+}

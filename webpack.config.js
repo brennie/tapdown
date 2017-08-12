@@ -16,13 +16,18 @@ const appCss = new ExtractTextPlugin({
 module.exports = {
   devtool: 'source-map',
   entry: [
-    path.resolve(__dirname, 'src', 'js', 'index.js'),
+    path.resolve(__dirname, 'src', 'js', 'index.jsx'),
     path.resolve(__dirname, 'src', 'css', 'global.pcss'),
     'normalize.css',
     'font-awesome/css/font-awesome.css',
   ],
   module: {
     rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: 'babel-loader',
+      },
       {
         test: /\.p?css$/,
         exclude: /node_modules/,
@@ -86,4 +91,8 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'html', 'index.ejs')
     }),
   ],
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+  },
 };
