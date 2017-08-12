@@ -1,0 +1,8 @@
+{
+  "name": "tapdown",
+  "version": "0.1.0",
+  "description": "Count down from 20 (or 40).",
+  "repository": "git@github.com:brennie/tapdown.git",
+  "author": "Barret Rennie <barret@brennie.ca>",
+  "license": "GPL-3.0"
+}
