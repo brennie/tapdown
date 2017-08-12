@@ -4,5 +4,9 @@
   "description": "Count down from 20 (or 40).",
   "repository": "git@github.com:brennie/tapdown.git",
   "author": "Barret Rennie <barret@brennie.ca>",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.5.3"
+  }
 }
