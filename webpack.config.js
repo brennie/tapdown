@@ -19,6 +19,7 @@ module.exports = {
     path.resolve(__dirname, 'src', 'js', 'index.js'),
     path.resolve(__dirname, 'src', 'css', 'global.pcss'),
     'normalize.css',
+    'font-awesome/css/font-awesome.css',
   ],
   module: {
     rules: [
@@ -58,6 +59,18 @@ module.exports = {
             },
           },
         }),
+      },
+      {
+        test: /\.(eot|woff|woff2|ttf|svg)(\?v=.+?)?$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            outputPath: `${path.join('static', 'font')}${path.sep}`,
+            publicPath: '../font/',
+            name: '[name].[ext]',
+            useRelativePath: true,
+          },
+        },
       },
     ],
   },
