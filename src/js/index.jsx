@@ -1,6 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+import Splash from 'js/components/splash';
+
 document.addEventListener('DOMContentLoaded', function onLoad() {
-  render(<h1>tapdown</h1>, document.querySelector('.content'));
+  render(<Splash />, document.querySelector('.content'));
 });
