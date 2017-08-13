@@ -2,7 +2,6 @@
 
 const path = require('path');
 
-
 const plugins = [
   require('postcss-import')({
     root: path.resolve(__dirname),
