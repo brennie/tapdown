@@ -9,7 +9,6 @@ const ScriptExtPlugin = require('script-ext-html-webpack-plugin');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 
-
 const nodeEnv = process.env.NODE_ENV || 'development';
 const isProduction = nodeEnv === 'production';
 
@@ -143,7 +142,6 @@ const developmentConfig = () => ({
   ],
 });
 
-
 module.exports = webpackMerge(
   commonConfig,
   isProduction ? productionConfig() : developmentConfig(),
@@ -153,5 +151,5 @@ module.exports = webpackMerge(
         defaultAttribute: 'defer',
       }),
     ],
-  }
+  },
 );
