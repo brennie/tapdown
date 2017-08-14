@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import createHistory from 'history/createMemoryHistory';
-import { Route } from 'react-router';
+import { Route } from 'react-router-dom';
 import {
   ConnectedRouter,
   routerMiddleware,
